@@ -1,0 +1,48 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+/* [type=radio]~label:not(:last-of-type){
+  margin-inline-end: 0;
+} */
+.tabs > section {
+    order: 999;
+    width: 100%;
+    display: none;
+}
+.tabs > input {
+    opacity: 0;
+    position: absolute;
+}
+
+.tabs > input[type="radio"]:checked + label + section {
+    display: unset;
+}
+
+@media (max-width: 992px) {
+    .tabs > label {
+        width: 100%;
+        margin: 0.1rem;
+    }
+}
+.tabs > label {
+    padding: 0.5em 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    background: var(--secondary-focus);
+}
+
+.tabs > input[type="radio"]:checked + label {
+    background: var(--primary-focus);
+}
+
+.tabs > label:hover {
+    background: var(--primary);
+    color: white;
+}
+.tabs section {
+    border-block: 1px var(--secondary-focus) dashed;
+    padding: 1em;
+}

@@ -1,0 +1,247 @@
+/* //////////////////////////////////////////////////////////// */
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+.flex {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+    height: 95%;
+}
+
+textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+article:has(header) {
+    padding-top: 0;
+}
+
+article {
+    --p: 0;
+    padding-block: 1rem;
+    margin-block: 1rem;
+    margin-block-start: 0;
+    border-top: 2px solid transparent;
+    transition: 500ms;
+
+    & header {
+        margin-block: 0 1rem;
+        padding: 1rem;
+    }
+    & > :not(:first-child) {
+        padding-block: var(--p);
+    }
+
+    &:hover,
+    &:focus-within {
+        border-top: 2px solid var(--primary);
+    }
+}
+
+blockquote:hover {
+    border-left: 2px solid var(--primary);
+    background-color: var(--card-sectionning-background-color);
+    scale: 1.01;
+    transition: 200ms;
+}
+
+body {
+    background-image: url(/bg.png);
+    background-repeat: repeat;
+    background-size: 10rem;
+}
+
+main {
+    min-height: 90vh;
+    min-height: 90vmin;
+}
+
+.toUpperCase {
+    text-transform: uppercase;
+}
+
+.bg {
+    background-color: var(--card-sectionning-background-color);
+}
+
+.gb {
+    background-color: var(--card-background-color);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.shadow {
+    box-shadow: var(--card-box-shadow);
+}
+
+/* Calendar styling */
+.cal-div {
+    position: relative;
+    height: 70px;
+}
+
+.cal-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+    border-radius: 5px;
+    padding: 12px;
+    width: 375px;
+    box-shadow: var(--card-box-shadow);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.cal-popup summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.calendar {
+    border-radius: 3px;
+    font-size: small;
+    overflow: hidden;
+    border: 0 !important;
+    font-size: 20px;
+}
+
+.react-calendar__tile--now {
+    background: rgb(215, 215, 215) !important;
+}
+
+.react-calendar__tile--active {
+    background: #006edc !important;
+}
+/* end cal styling*/
+#MOB {
+    display: block;
+}
+
+#PC {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    #PC {
+        display: block;
+    }
+
+    #MOB {
+        display: none;
+    }
+
+    .gap {
+        gap: 1rem;
+    }
+}
+
+.btn-del {
+    --background-color: hsla(1, 100%, 51%, 100%);
+    &:hover {
+        --background-color: hsla(1, 100%, 81%, 100%);
+    }
+}
+
+span {
+    --background-color: transparent;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+.btn-red,
+.red {
+    --background-color: hsla(6, 93%, 51%, 53%);
+    &:hover {
+        --background-color: hsla(6, 93%, 41%, 63%);
+    }
+}
+
+.btn-blue,
+.blue {
+    --background-color: hsla(208, 100%, 33%, 53%);
+}
+
+.btn-green,
+.green {
+    --background-color: hsla(150, 100%, 21%, 53%);
+    &:hover {
+        --background-color: hsla(150, 100%, 11%, 63%);
+    }
+}
+
+.btn-orange,
+.orange {
+    --background-color: hsla(30, 100%, 43%, 53%);
+    &:hover {
+        --background-color: hsla(30, 93%, 21%, 63%);
+    }
+}
+
+.btn-gray,
+.gray {
+    --background-color: hsla(30, 0%, 43%, 40%);
+    &:hover {
+        --background-color: hsla(30, 0%, 21%, 60%);
+    }
+}
+
+table,
+th {
+    margin: 0;
+    padding: 0;
+}
+
+td textarea,
+td input,
+td select {
+    margin-bottom: 0;
+}
+
+header,
+header .btn {
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+tr td:first-child {
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    td {
+        display: inline-block;
+        width: 100%;
+    }
+    thead {
+        display: none;
+    }
+}
